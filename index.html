@@ -77,13 +77,13 @@
                                 Tokenomics</a
                             >
                         </li>
-                        <li>
-                            <a href="#" class="btn-download special-download">
-                                <i class="fas fa-download"></i> Download Wallet
-                            </a>
+                        <li><a href="#waitlist" class="btn-download special-download">
+    <i class="fas fa-user-plus"></i> Join Waitlist
+</a>
+                            
                         </li>
                     </ul>
-                </div>
+                </a>
             </nav>
         </header>
         <section class="hero">
@@ -150,13 +150,21 @@
                     <p>
                         Your privacy-focused Decentralized Ecosystem with
                         Zero-Knowledge Proofs (ZKPs)
-                    </p>
-                    <a href="#" class="hero-btn">
-                        <i class="fas fa-download"></i>&nbsp; Download Wallet</a
-                    >
-                    <a href="#" class="hero-btn">
-                        <i class="fas fa-store"></i>&nbsp; Enter Marketplace
-                    </a>
+                    </p><div class="hero-buttons">
+  <a href="#" class="hero-btn coming-soon-btn" data-type="wallet">
+    <i class="fas fa-download"></i> Download Wallet
+    <span class="soon-tag">Coming Soon</span>
+  </a>
+
+  <a href="#" class="hero-btn coming-soon-btn" data-type="marketplace">
+    <i class="fas fa-store"></i> Enter Marketplace
+    <span class="soon-tag">Coming Soon</span>
+  </a>
+</div>
+
+<!-- Toast Notification Container -->
+<div id="coming-soon-toast" class="coming-soon-toast">Coming Soon</div>
+                    
                     <div class="store-buttons">
                         <a href="#" class="store-btn">
                             <i class="fab fa-google-play"></i>
@@ -220,55 +228,42 @@
                     </div>
                 </div>
             </section>
+<section class="featured">
+  <h2>Featured Product</h2>
 
-            <section class="featured">
-                <h2>Featured Product</h2>
+  <div class="featured-wrapper">
+    <!-- Image Container -->
+    <div class="image-container">
+      <div class="neon-frame">
+        <img
+          src="img/featured.png"
+          alt="Product 1"
+          class="img1"
+          oncontextmenu="return false;"
+        />
+      </div>
+    </div>
 
-                <div class="featured-wrapper">
-                    <!-- Image Container -->
-                    <div class="image-container">
-                        <img
-                            src="img/featured.png"
-                            alt="Product 1"
-                            class="img1"
-                            oncontextmenu="return false;"
-                        />
-                    </div>
-                    <div class="featured-text">
-                        <h3>Decentralized Exchange</h3>
-                        <p>
-                            <strong>Non-Custodial Trading</strong>: Users
-                            maintain full control of their assets, eliminating
-                            reliance on third parties.
-                        </p>
+    <!-- Stylish Text Section -->
+    <div class="featured-text">
+      <h3><i class="fas fa-random"></i> Decentralized Exchange</h3>
+      <p><strong>Non-Custodial Trading</strong>: Users maintain full control of their assets, eliminating reliance on third parties.</p>
 
-                        <h3>Layer 1 Privacy Focused Blockchain</h3>
-                        <p>
-                            A scalable, privacy-focused Layer 1 blockchain
-                            optimized for DeFi, Payment, DID, and enterprise
-                            adoption.
-                        </p>
-                        <h3>Centralized Exchange</h3>
-                        <p>
-                            A non-custodial, privacy-preserving decentralized
-                            wallet that gives users full control over their
-                            digital assets.
-                        </p>
-                        <h3>E-commerce Marketplace</h3>
-                        <p>
-                            A decentralized marketplace where merchants can
-                            trade securely using crypto payments and smart
-                            contracts.
-                        </p>
-                        <h3>PENXCHAIN DeFi Wallet</h3>
-                        <p>
-                            A non-custodial, privacy-preserving decentralized
-                            wallet that gives users full control over their
-                            digital assets.
-                        </p>
-                    </div>
-                </div>
-            </section>
+      <h3><i class="fas fa-shield-alt"></i> Privacy-Focused Blockchain</h3>
+      <p>A scalable, privacy-focused Layer 1 blockchain optimized for DeFi, Payment, DID, and enterprise adoption.</p>
+
+      <h3><i class="fas fa-database"></i> Centralized Exchange</h3>
+      <p>A non-custodial, privacy-preserving decentralized wallet that gives users full control over their digital assets.</p>
+
+      <h3><i class="fas fa-store"></i> E-commerce Marketplace</h3>
+      <p>A decentralized marketplace where merchants can trade securely using crypto payments and smart contracts.</p>
+
+      <h3><i class="fas fa-wallet"></i> PENXCHAIN DeFi Wallet</h3>
+      <p>A non-custodial, privacy-preserving decentralized wallet that gives users full control over their digital assets.</p>
+    </div>
+  </div>
+</section>
+            
             <section class="wallet-overview">
   <h2>PENXCHAIN Wallet Overview</h2>
 
@@ -307,11 +302,15 @@
   <div class="waitlist-h2">Join Waitlist</div>
   <p class="subtitle">Stay Updated with the Community</p>
   <p class="description">gain the peace of mind that comes from knowing your digital world is genuinely yours, free from the hidden agendas and vulnerabilities of centralized control</p>
-  
-  <div class="waitlist-form">
+<div class="waitlist-form">
+  <div class="input-wrapper">
+    <i class="fas fa-envelope"></i>
     <input type="email" placeholder="Enter Your Email" />
-    <button class="hero-btn">Subscribe</button>
   </div>
+  <button>Subscribe</button>
+</div>
+
+
 </div>
         </main>
 
