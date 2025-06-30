@@ -1,4 +1,32 @@
-// js/activeLink.js
+// Toast logic
+const toast = document.getElementById("coming-soon-toast");
+const soonButtons = document.querySelectorAll(".coming-soon-btn");
+
+soonButtons.forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+
+    const type = btn.getAttribute("data-type");
+    let message = "";
+
+    if (type === "wallet") {
+      message = "🚀 PENXCHAIN Wallet is Coming Soon!";
+    } else if (type === "marketplace") {
+      message = "🛒 Marketplace access is Coming Soon!";
+    } else {
+      message = "✨ Coming Soon!";
+    }
+
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 4000);
+  });
+});
+
+// js/activeLink
 document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll(".nav-link");
 
@@ -123,21 +151,21 @@ function typeEffect() {
 typeEffect(); // Run it!
 
 const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // Optional: remove after animation
-            }
-        });
-    },
-    {
-        threshold: 0.1
-    }
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.1
+  }
 );
 
 document.querySelectorAll(".featured-text h3, .featured-text p").forEach(el => {
-    observer.observe(el);
+  observer.observe(el);
 });
 
 //PENXCHAIN Wallet Overview JS
