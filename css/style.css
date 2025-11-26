@@ -23,7 +23,7 @@
 /* Card styles */
 .team-card {
     width: 260px;
-    background: rgba(255, 255, 255, 0.08);
+    background: white;
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 18px;
@@ -42,7 +42,7 @@
 
 .team-card img {
     width: 100%;
-    height: auto;
+    height: 280px;
     object-fit: cover;
 }
 
@@ -60,5 +60,5 @@
 
 .team-info p {
     font-size: 14px;
-    color: #d0d0d5;
+    color: black;
 }
