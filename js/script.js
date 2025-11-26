@@ -222,20 +222,22 @@ dots.forEach((dot, index) => {
 // Footer - year
   document.getElementById("current-year").textContent = new Date().getFullYear();
 
-.badge-container { display: inline-block; margin-bottom: 24px; } 
-.badge { background-color: rgb(19, 19, 87); 
-color: #3b82f6; 
-padding: 8px 16px; border-radius: 50px; 
-font-weight: 600; 
-font-size: 0.9rem;
-display: flex; 
-align-items: center; 
-gap: 8px; 
-border: 1px solid rgba(59, 130, 246, 0.3); /* The Breathing Animation Applied Here */ animation: breathe 3s infinite ease-in-out; }
-/* Animation Keyframes */ 
-@keyframes breathe { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); transform: scale(1); } 50% { box-shadow: 0 0 20px 5px rgba(59, 130, 246, 0.2); /* The glow */ transform: scale(1.02); /* Subtle pop */ } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); transform: scale(1); } }
-  
- h1 { font-size: 3.5rem;
-font-weight: 800; color: #ffffff; /* White text as requested */ line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.02em; } .highlight-blue { color: #3b82f6; /* Keeping the blue consistent */ } /* 3. THE SUBTEXT */ p.description { color: #9ca3af; /* A soft gray for readability against dark bg */ font-size: 1.125rem; line-height: 1.6; margin-bottom: 40px; max-width: 650px; margin-left: auto; margin-right: auto; } /* 4. SOCIAL PROOF (The Counter) */ .social-proof { display: flex; justify-content: center; align-items: center; gap: 10px; color: #3b82f6; font-weight: 600; font-size: 1rem; } .icon-group { display: flex; color: #3b82f6; font-size: 1.2rem; } 
-/* Responsive tweaks for mobile */
- @media (max-width: 600px) { h1 { font-size: 2.5rem; } p.description { font-size: 1rem; } }
+let currentCount = 27; 
+   const maxCount = 99; 
+   const counterElement = document.getElementById('user-count'); 
+   // Function to generate a random delay between min and max milliseconds 
+  const getRandomTime = (min, max) => { return Math.floor(Math.random() * (max - min + 1) + min); }; 
+  const incrementCounter = () => {
+     // Stop if we reached 99 
+if (currentCount >= maxCount) { return; } 
+// Increment count 
+currentCount++; 
+counterElement.textContent = currentCount; 
+// Calculate the NEXT random delay // Logic: Short burst (500ms) to long pauses (8000ms) // This makes it unpredictable as requested 
+let nextDelay = getRandomTime(1000, 10000); 
+// Log for debugging (optional, you can remove this) 
+// console.log(New count: ${currentCount}, Next update in: ${nextDelay}ms); 
+// Recursive call with the new delay 
+setTimeout(incrementCounter, nextDelay); };
+// Initialize the first timeout 
+setTimeout(incrementCounter, getRandomTime(2000, 4000));
