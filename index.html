@@ -322,74 +322,47 @@
 </section>
 
 <section class="team-section">
-  <div class="team-header">
-    <h2>Meet The Visionaries</h2>
-    <p>The creative minds building the future of digital commerce.</p>
-  </div>
+    <h2 class="team-title gsap-title">Meet The Team</h2>
 
-  <div class="team-grid">
+    <div class="team-container">
 
-    <!-- Person 1 -->
-    <div class="team-card">
-      <div class="top-accent"></div>
+        <!-- Member 1 -->
+        <div class="team-card gsap-card">
+            <img src="img/emmanuelbrighton.jpg" alt="Emmanuel Brighton Image">
+            <div class="team-info">
+                <h3>Emmanuel Brighton</h3>
+                <p>Founder & Product Visionary</p>
+            </div>
+        </div>
 
-      <img src="img/emmanuelbrighton.jpg" alt="Team Member">
+        <!-- Member 2 -->
+        <div class="team-card gsap-card">
+            <img src="img/nastasha.jpg" alt="Nastasha Firdaus Image">
+            <div class="team-info">
+                <h3>Nastasha Firdaus Khan</h3>
+                <p>Head of Ecosystem Growth & Partnerships</p>
+            </div>
+        </div>
 
-      <h3>Emmanuel Brighton</h3>
-      <p class="role">Founder & Product Visionary</p>
+        <!-- Member 3 -->
+        <div class="team-card gsap-card">
+            <img src="img/godswill.jpg" alt="God'swill Akpan Image">
+            <div class="team-info">
+                <h3>God'swill Akpan</h3>
+                <p>Co-founder & CMO</p>
+            </div>
+        </div>
 
-      <div class="socials">
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-twitter"></i>
-      </div>
+        <!-- Member 4 -->
+        <div class="team-card gsap-card">
+            <img src="img/emmanueloluwafemi.jpg" alt="Emmanuel Oluwafemi Image">
+            <div class="team-info">
+                <h3>Emmanuel Oluwafemi Joseph</h3>
+                <p>Co-founder & CTO</p>
+            </div>
+        </div>
+
     </div>
-
-    <!-- Person 2 -->
-    <div class="team-card">
-      <div class="top-accent"></div>
-
-      <img src="img/nastasha.jpg" alt="Team Member">
-
-      <h3>Nastasha Firdaus Khan</h3>
-      <p class="role">Head of Ecosystem Growth & Partnerships</p>
-
-      <div class="socials">
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-twitter"></i>
-      </div>
-    </div>
-
-    <!-- Person 3 -->
-    <div class="team-card">
-      <div class="top-accent"></div>
-
-      <img src="img/godswill.jpg" alt="Team Member">
-
-      <h3>God'swill Akpan</h3>
-      <p class="role">Co-founder & CMO</p>
-
-      <div class="socials">
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-twitter"></i>
-      </div>
-    </div>
-
-    <!-- Person 4 -->
-    <div class="team-card">
-      <div class="top-accent"></div>
-
-      <img src="img/emmanueloluwafemi.jpg" alt="Team Member">
-
-      <h3>Emmanuel Oluwafemi Joseph</h3>
-      <p class="role">Co-founder & CTO</p>
-
-      <div class="socials">
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-twitter"></i>
-      </div>
-    </div>
-
-  </div>
 </section>
 
 
@@ -468,5 +441,27 @@
 </footer>
 
         <script src="js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script>
+    // Animate Title
+    gsap.from(".gsap-title", {
+        opacity: 0,
+        y: -20,
+        duration: 1.3,
+        ease: "power3.out"
+    });
+
+    // Animate Cards Staggered
+    gsap.to(".gsap-card", {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: 0.25
+    });
+</script>
+
     </body>
 </html>
