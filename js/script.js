@@ -241,3 +241,25 @@ let nextDelay = getRandomTime(1000, 10000);
 setTimeout(incrementCounter, nextDelay); };
 // Initialize the first timeout 
 setTimeout(incrementCounter, getRandomTime(2000, 4000));
+
+//Featured Products js
+document.body.setAttribute('data-width', window.innerWidth);
+  window.addEventListener('resize', () => {
+    document.body.setAttribute('data-width', window.innerWidth);
+  });
+
+// Reveal animation
+const cards = document.querySelectorAll(".penx-card");
+
+function revealCards() {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      card.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealCards);
+window.addEventListener("load", revealCards); 
+
