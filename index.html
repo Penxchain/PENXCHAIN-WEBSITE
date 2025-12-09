@@ -401,7 +401,7 @@
           <li><a href="#">Download Wallet</a></li>
           <li><a href="#">Download Marketplace</a></li>
           <li><a href="https://forms.gle/6VYv7HgRoMaAwv8D9" target="_blank">Join Beta Test</a></li>
-          <li><a href="docs/PENXCHAIN-WHITEPAPER.pdf" download><i class="fas fa-file-alt"></i> Whitepaper</i></li> 
+          <li><a href="docs/PENXCHAIN-WHITEPAPER IDO.pdf" download><i class="fas fa-file-alt"></i> Whitepaper</i></li> 
         </ul>
       </div>
 
@@ -442,21 +442,18 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <script>
-    // 1. Register the plugin
+    
     gsap.registerPlugin(ScrollTrigger);
 
-    // 2. Create a timeline for the entire section's reveal animation
     const teamReveal = gsap.timeline({
         scrollTrigger: {
-            trigger: ".team-section", // The element that starts the animation
-            start: "top 80%",        // When the top of the section hits 80% down the viewport
-            toggleActions: "play none none none" // Only play the animation once
+            trigger: ".team-section", 
+            start: "top 80%",       
+            toggleActions: "play none none none"
         }
     });
 
-    // --- Animation Logic ---
-
-    // 3. Animate the Title (Fade/Slide Up) - Runs first on the timeline
+    // Animate the Title (Fade/Slide Up)
     teamReveal.from(".gsap-title", {
         opacity: 0,
         y: -40, // Start slightly above
@@ -464,18 +461,15 @@
         ease: "power3.out"
     });
 
-    // 4. Animate the Cards (Combined Fade, Slide Up, and Scale Up - Staggered)
-    // We use .from() and target the pre-animation state defined in your CSS:
-    // opacity: 0;
-    // transform: translateY(40px) scale(0.95);
+    //  Animate the Cards
     teamReveal.to(".gsap-card", {
-        opacity: 1,        // Fade in
-        y: 0,              // Slide up to final position
-        scale: 1,          // Scale up to final size
+        opacity: 1,        
+        y: 0,
+        scale: 1,
         duration: 1.2,
         ease: "power3.out",
-        stagger: 0.2, // Stagger effect for 'freshness'
-        delay: -0.5 // Optional: Start card animation before title animation finishes
+        stagger: 0.2,
+        delay: -0.5 // Start card animation before title animation finishes
     });
 </script>
         <script src="js/script.js"></script>
